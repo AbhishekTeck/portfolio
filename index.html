@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Abhishek Rao | Integration Engineer</title>
+<title>Abhishek Rao | Portfolio</title>
 
 <style>
 body {
@@ -13,7 +13,7 @@ body {
 }
 
 .container {
-  max-width: 1000px;
+  max-width: 900px;
   margin: auto;
   padding: 40px 20px;
 }
@@ -22,98 +22,26 @@ h1 {
   font-size: 40px;
 }
 
-h2 {
-  margin-top: 40px;
-  border-left: 4px solid #38bdf8;
-  padding-left: 10px;
-}
-
 .card {
   background: #1e293b;
   padding: 20px;
   margin-top: 20px;
   border-radius: 12px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .highlight {
   color: #38bdf8;
-}
-
-.tag {
-  display: inline-block;
-  background: #334155;
-  padding: 6px 10px;
-  margin: 5px;
-  border-radius: 6px;
-}
-
-/* Flow styling */
-.flow-container {
-  margin-top: 20px;
-}
-
-.step {
-  background: #1e293b;
-  padding: 15px;
-  border-radius: 10px;
-  margin-top: 20px;
-  font-weight: bold;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.6s ease;
-}
-
-.sub {
-  margin-left: 20px;
-  margin-top: 8px;
-  color: #94a3b8;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.6s ease;
-}
-
-/* Animated flow line */
-.flow-line {
-  height: 40px;
-  width: 2px;
-  background: #334155;
-  margin: auto;
-  position: relative;
-  overflow: hidden;
-  opacity: 0;
-}
-
-.dot {
-  width: 8px;
-  height: 8px;
-  background: #38bdf8;
-  border-radius: 50%;
-  position: absolute;
-  left: -3px;
-  top: 0;
-  animation: moveDown 1.5s linear infinite;
-}
-
-@keyframes moveDown {
-  0% { top: 0; opacity: 0; }
-  20% { opacity: 1; }
-  100% { top: 40px; opacity: 0; }
-}
-
-.final {
-  border-left: 4px solid #22c55e;
-}
-
-.show {
-  opacity: 1 !important;
-  transform: translateY(0) !important;
-}
-
-/* Image */
-img {
-  width: 100%;
-  border-radius: 10px;
-  margin-top: 20px;
 }
 </style>
 
@@ -128,131 +56,28 @@ img {
 
 <div class="card">
   <p>
-    Integration Engineer with 5+ years of experience designing enterprise-scale integrations.
-    Currently leading a team of 5 developers and delivering high-performance solutions.
+    Integration Engineer with 5+ years of experience designing enterprise-scale systems.
+    Currently leading a team of 5 developers and delivering high-performance integration solutions.
   </p>
 </div>
 
-<h2>Case Study: Scalable File Processing</h2>
+<h2>Case Studies</h2>
 
-<div class="card">
-  <b>Problem</b>
-  <p>
-    Large file processing with audit requirements would overload Integration Server
-    if handled sequentially.
-  </p>
-</div>
+<a href="solution1.html">
+  <div class="card">
+    <b>Scalable Large File Processing Architecture</b>
+    <p>Event-driven design to handle large files with audit tracking and parallel processing.</p>
+  </div>
+</a>
 
-<div class="card">
-  <b>Solution</b>
-  <p>
-    Designed an <span class="highlight">event-driven architecture</span> using file splitting,
-    asynchronous messaging, and parallel processing.
-  </p>
-</div>
-
-<h2>Architecture Flow</h2>
-
-<div class="flow-container">
-
-<div class="step">1️⃣ MFT picks file → Work Directory</div>
-<div class="flow-line"><div class="dot"></div></div>
-
-<div class="step">2️⃣ Initial Service</div>
-<div class="sub">
-• Insert START in audit table<br>
-• Split file into chunks<br>
-• Initialize cache<br>
-• Publish start notifications
-</div>
-
-<div class="flow-line"><div class="dot"></div></div>
-
-<div class="step">3️⃣ Messaging Layer (Async)</div>
-
-<div class="flow-line"><div class="dot"></div></div>
-
-<div class="step">4️⃣ Parallel Processing</div>
-<div class="sub">
-• Process files in parallel<br>
-• Load into Snowflake<br>
-• Publish completion events
-</div>
-
-<div class="flow-line"><div class="dot"></div></div>
-
-<div class="step">5️⃣ Reconciliation Service</div>
-<div class="sub">
-• Increment processed count<br>
-• Compare with total file count
-</div>
-
-<div class="flow-line"><div class="dot"></div></div>
-
-<div class="step final">6️⃣ Final Step</div>
-<div class="sub">
-• Update audit table as COMPLETED<br>
-• Log success
-</div>
+<!-- Add more like this later -->
+<!--
+<a href="solution2.html">
+  <div class="card">Another solution</div>
+</a>
+-->
 
 </div>
-
-<h2>Architecture Diagram</h2>
-<div class="card">
-  <p>High-level system design:</p>
-  <img src="architecture.png" alt="Architecture Diagram">
-</div>
-
-<h2>Highlights</h2>
-
-<div class="card">
-  <ul>
-    <li>Delivered 40+ integrations</li>
-    <li>Built reusable framework (~40% effort reduction)</li>
-    <li>Leading team of 5 developers</li>
-  </ul>
-</div>
-
-<h2>Skills</h2>
-
-<div class="card">
-  <span class="tag">webMethods</span>
-  <span class="tag">Integration Server</span>
-  <span class="tag">REST</span>
-  <span class="tag">SOAP</span>
-  <span class="tag">Java</span>
-  <span class="tag">JMS</span>
-  <span class="tag">XML</span>
-  <span class="tag">JSON</span>
-</div>
-
-<h2>Contact</h2>
-
-<div class="card">
-  <p>Email: your.email@gmail.com</p>
-  <p>LinkedIn: linkedin.com/in/yourprofile</p>
-</div>
-
-</div>
-
-<script>
-const elements = document.querySelectorAll('.step, .sub, .flow-line');
-
-let delay = 0;
-
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      setTimeout(() => {
-        entry.target.classList.add('show');
-      }, delay);
-      delay += 150;
-    }
-  });
-});
-
-elements.forEach(el => observer.observe(el));
-</script>
 
 </body>
 </html>
